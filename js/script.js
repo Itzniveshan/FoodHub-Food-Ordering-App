@@ -2,7 +2,6 @@
 // FOODHUB - MAIN JAVASCRIPT
 // =====================================================
 
-
 // =====================================================
 // FOOD DATA
 // =====================================================
@@ -1430,88 +1429,81 @@ if (orderHistoryContainer) {
 
 }
 
-
-// =====================================================
-// CONTACT FORM
-// =====================================================
+// ==============================
+// CONTACT FORM - EMAILJS
+// ==============================
 
 const contactForm =
-    document.getElementById(
-        "contactForm"
-    );
-
+    document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            const name =
-                document
-                    .getElementById("name")
-                    .value
-                    .trim();
+    // Initialize EmailJS
+    emailjs.init({
+        publicKey: "lRKr4Gd5-9Pqyd5vL"
+    });
 
 
-            const email =
-                document
-                    .getElementById("email")
-                    .value
-                    .trim();
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const message =
+            document.getElementById("message").value.trim();
 
 
-            const message =
-                document
-                    .getElementById("message")
-                    .value
-                    .trim();
+        if (name === "") {
+            alert("Please enter your name.");
+            return;
+        }
+
+        if (email === "") {
+            alert("Please enter your email.");
+            return;
+        }
+
+        if (message === "") {
+            alert("Please enter your message.");
+            return;
+        }
 
 
-            if (name === "") {
+        emailjs.sendForm(
+            "service_ul8enp9",
+            "template_7unaabp",
+            contactForm
+        )
 
-                alert(
-                    "Please enter your name."
-                );
+        .then(function (response) {
 
-                return;
-
-            }
-
-
-            if (email === "") {
-
-                alert(
-                    "Please enter your email."
-                );
-
-                return;
-
-            }
-
-
-            if (message === "") {
-
-                alert(
-                    "Please enter your message."
-                );
-
-                return;
-
-            }
-
-
-            alert(
-                "Message sent successfully!"
+            console.log(
+                "Email sent successfully:",
+                response.status,
+                response.text
             );
 
+            alert("Message sent successfully!");
 
             contactForm.reset();
 
-        }
-    );
+        })
+
+        .catch(function (error) {
+
+            console.error("EmailJS Error:", error);
+
+            alert(
+                "Failed to send message. Please try again."
+            );
+
+        });
+
+    });
 
 }
