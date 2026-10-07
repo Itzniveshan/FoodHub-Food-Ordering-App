@@ -1,0 +1,170 @@
+/* FoodHub Custom CSS */
+
+
+body {
+    background-color: var(--cream-bg);
+    color: var(--charcoal);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Food images */
+.card-img-top {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Food cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Carousel images */
+.carousel-item img {
+    height: 50px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Order page food image */
+#foodImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==============================
+   FOODHUB LOGO
+   ============================== */
+
+.foodhub-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+
+    /* Carousel */
+    .carousel-item img {
+        height: 250px;
+    }
+
+    /* Order page image */
+    .order-image-container {
+        height: 300px;
+    }
+
+    /* Card images */
+    .card-img-top {
+        height: 180px;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
+
+/* ==============================
+   FOODHUB COLOR PALETTE
+   ============================== */
+
+:root {
+    --primary-orange: #F97316;
+    --orange-hover: #EA580C;
+    --accent-yellow: #F59E0B;
+    --cream-bg: #FFF7ED;
+    --dark-brown: #431407;
+    --charcoal: #1F2937;
+    --white: #FFFFFF;
+    --success-green: #16A34A;
+}
+
+
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
+
+body {
+    background-color: var(--cream-bg);
+    color: var(--charcoal);
+}
+
+
+/* ==============================
+   FOODHUB NAVBAR
+   ============================== */
+
+.foodhub-navbar {
+    background-color: var(--charcoal);
+}
+
+
+/* FoodHub Logo */
+
+.foodhub-navbar .navbar-brand {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+/* Navbar Links */
+
+.foodhub-navbar .nav-link {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+
+/* Navbar Link Hover */
+
+.foodhub-navbar .nav-link:hover {
+    color: var(--accent-yellow);
+}
+
+
+/* Active Link */
+
+.foodhub-navbar .nav-link.active {
+    color: var(--primary-orange);
+}
+
+
+/* Cart Badge */
+
+.foodhub-navbar .badge {
+    background-color: var(--primary-orange) !important;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+}

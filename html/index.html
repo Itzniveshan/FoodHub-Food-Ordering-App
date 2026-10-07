@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodHub - Food Ordering</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark foodhub-navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="index.html">
+               FoodHub
+            </a>
+            <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#foodhubNavbar"
+                aria-controls="foodhubNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+    
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="foodhubNavbar">
+    
+                <ul class="navbar-nav ms-auto">
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            Home
+                        </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">
+                            My Orders
+                        </a>
+                    </li>
+    
+                    <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                Cart
+                                <span class="badge bg-danger">0</span>
+                            </a>
+                        </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="food.html">
+                            Food
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+       <!-- Hero Food Carousel -->
+    <section>
+    
+        <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="3000">
+    
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+    
+                <button
+                    type="button"
+                    data-bs-target="#foodCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1">
+                </button>
+    
+                <button
+                    type="button"
+                    data-bs-target="#foodCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2">
+                </button>
+    
+                <button
+                    type="button"
+                    data-bs-target="#foodCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3">
+                </button>
+    
+            </div>
+    
+    
+            <!-- Carousel Images -->
+            <div class="carousel-inner">
+    
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+    
+                    <img
+                        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1600&q=80"
+                        class="d-block w-100"
+                        style="height: 600px; object-fit: cover;"
+                        alt="Delicious food">
+    
+                    <div class="carousel-caption d-none d-md-block">
+    
+                        <h2>Delicious Food Delivered</h2>
+    
+                        <p>
+                            Fresh and tasty meals delivered to your doorstep.
+                        </p>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+    
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1600&q=80"
+                         class="d-block w-100"
+                         style="height: 600px; object-fit: cover;"
+                        alt="Fresh pizza">
+    
+                    <div class="carousel-caption d-none d-md-block">
+    
+                        <h2>Fresh • Fast • Tasty</h2>
+    
+                        <p>
+                            Your favorite food is just a few clicks away.
+                        </p>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+    
+                    <img
+                       src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=80"
+                         class="d-block w-100"
+                         style="height: 600px; object-fit: cover;"
+                        alt="Tasty meals">
+    
+                    <div class="carousel-caption d-none d-md-block">
+    
+                        <h2>Taste You'll Love</h2>
+    
+                        <p>
+                            Discover delicious meals made for every craving.
+                        </p>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    
+            <!-- Previous Button -->
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#foodCarousel"
+                data-bs-slide="prev">
+    
+                <span class="carousel-control-prev-icon"></span>
+    
+                <span class="visually-hidden">
+                    Previous
+                </span>
+    
+            </button>
+    
+    
+            <!-- Next Button -->
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#foodCarousel"
+                data-bs-slide="next">
+    
+                <span class="carousel-control-next-icon"></span>
+    
+                <span class="visually-hidden">
+                    Next
+                </span>
+    
+            </button>
+    
+        </div>
+    
+    </section>
+    
+    
+    <!-- Food Menu Section -->
+    <section class="py-5">
+    
+        <div class="container">
+    
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+    
+               <h2 id="foods" class="text-center mb-4">Our Menu</h2>
+                <p class="text-muted">
+                    Explore our delicious food items
+                </p>
+    
+            </div>
+    
+    
+            <!-- Food Cards Row -->
+            <div class="row g-4">
+    
+    
+                <!-- Chicken Burger -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Burger.jpg"
+                            class="card-img-top"
+                            alt="Chicken Burger">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Burger
+                            </span>
+    
+                            <h5 class="card-title">
+                                Chicken Burger
+                            </h5>
+    
+                            <p class="card-text">
+                                Juicy chicken burger with fresh vegetables
+                                and delicious sauce.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹150
+                            </h6>
+    
+                            <a href="/Frontend/FoodHub/html/food.html?food=burger" class="btn btn-primary">
+                             Order Now
+                            </a>
+                              <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="burger">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Pizza -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Pizza.jpg"
+                            class="card-img-top"
+                            alt="Pizza">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Pizza
+                            </span>
+    
+                            <h5 class="card-title">
+                                Cheese Pizza
+                            </h5>
+    
+                            <p class="card-text">
+                                Hot and cheesy pizza topped with fresh
+                                ingredients.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹250
+                            </h6>
+    
+                            <a href="/Frontend/FoodHub/html/food.html?food=pizza" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="pizza">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Chicken Biryani -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Biryani.jpg"
+                            class="card-img-top"
+                            alt="Chicken Biryani">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Biryani
+                            </span>
+    
+                            <h5 class="card-title">
+                                Chicken Biryani
+                            </h5>
+    
+                            <p class="card-text">
+                                Aromatic basmati rice cooked with tender
+                                chicken and spices.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹180
+                            </h6>
+    
+                            <a href="/Frontend/FoodHub/html/food.html?food=biryani" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="biryani">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Pasta -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Pasta.jpg"
+                            class="card-img-top"
+                            alt="Pasta">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Pasta
+                            </span>
+    
+                            <h5 class="card-title">
+                                Creamy Pasta
+                            </h5>
+    
+                            <p class="card-text">
+                                Creamy pasta prepared with herbs and
+                                delicious sauce.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹200
+                            </h6>
+    
+                           <a href="/Frontend/FoodHub/html/food.html?food=pasta" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="pasta">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- French Fries -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Fries.jpg"
+                            class="card-img-top"
+                            alt="French Fries">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Snacks
+                            </span>
+    
+                            <h5 class="card-title">
+                                French Fries
+                            </h5>
+    
+                            <p class="card-text">
+                                Crispy golden fries served with delicious
+                                dipping sauce.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹100
+                            </h6>
+    
+                            <a href="/Frontend/FoodHub/html/food.html?food=fries" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="fries">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Chicken Shawarma -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Shawarma.jpg"
+                            class="card-img-top"
+                            alt="Chicken Shawarma">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Shawarma
+                            </span>
+    
+                            <h5 class="card-title">
+                                Chicken Shawarma
+                            </h5>
+    
+                            <p class="card-text">
+                                Tender chicken wrapped with fresh vegetables
+                                and creamy sauce.
+                            </p>
+    
+                            <h6 class="fw-bold">
+                                ₹160
+                            </h6>
+    
+                            <a href="/Frontend/FoodHub/html/food.html?food=shawarma" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="shawarma">
+                                  Add to Cart
+                              </button>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <!-- Sandwich -->
+                <div class="col-12 col-md-6 col-lg-3">
+    
+                    <div class="card h-100">
+    
+                        <img
+                            src="../images/food/Sandwich.jpg"
+                            class="card-img-top"
+                            alt="Sandwich">
+    
+                        <div class="card-body">
+    
+                            <span class="badge bg-warning text-dark mb-2">
+                                Sandwich
+                            </span>
+    
+                            <h5 class="card-title">
+                                Club Sandwich
+                            </h5>
+    
+                            <p class="card-text">
+                                Fresh sandwich layered with vegetables,
+                                cheese and tasty fillings.
+                            </p>
+       
+                               <h6 class="fw-bold">
+                                   ₹140
+                               </h6>
+       
+                               <a href="/Frontend/FoodHub/html/food.html?food=sandwich" class="btn btn-primary">
+                                  Order Now
+                               </a>
+                               <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="sandwich">
+                                  Add to Cart
+                              </button>
+                           </div>
+       
+                       </div>
+       
+                   </div>
+       
+       
+                   <!-- Fried Rice -->
+                   <div class="col-12 col-md-6 col-lg-3">
+       
+                       <div class="card h-100">
+       
+                           <img
+                               src="../images/food/Rice.jpg"
+                               class="card-img-top"
+                                alt="Fried Rice">
+   
+                       <div class="card-body">
+   
+                           <span class="badge bg-warning text-dark mb-2">
+                               Rice
+                           </span>
+   
+                           <h5 class="card-title">
+                               Chicken Fried Rice
+                           </h5>
+   
+                           <p class="card-text">
+                               Flavorful fried rice cooked with chicken,
+                               vegetables and special spices.
+                           </p>
+   
+                           <h6 class="fw-bold">
+                               ₹170
+                           </h6>
+                            <a href="/Frontend/FoodHub/html/food.html?food=friedrice" class="btn btn-primary">
+                                Order Now
+                            </a>
+                            <button
+                                  type="button"
+                                  class="btn btn-success home-add-cart"
+                                  data-food="friedrice">
+                                  Add to Cart
+                              </button>
+                       </div>
+   
+                   </div>
+   
+               </div>
+   
+   
+           </div>
+   
+       </div>
+   
+   </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                <h3 class="fw-bold">🍴 FoodHub</h3>
+
+                <p class="text-light">
+                    Delicious food, delivered with care.
+                    Discover your favorite meals and order
+                    fresh food from FoodHub.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="col-12 col-md-6 col-lg-2 mb-4">
+
+                <h5 class="fw-bold">Quick Links</h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="index.html"
+                           class="text-white text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="index.html#foods"
+                           class="text-white text-decoration-none">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="cart.html"
+                           class="text-white text-decoration-none">
+                            Cart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                           class="text-white text-decoration-none">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                <h5 class="fw-bold">Contact Us</h5>
+
+                <p class="mb-2">
+                    📍 Chennai, India
+                </p>
+
+                <p class="mb-2">
+                    📞 +91 98765 43210
+                </p>
+
+                <p class="mb-2">
+                    ✉️ support@foodhub.com
+                </p>
+
+            </div>
+
+
+            <!-- Social Media -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                <h5 class="fw-bold">Follow Us</h5>
+
+                <p>
+                    Stay connected with FoodHub.
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons mb-3">
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-facebook"></i> </a> 
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-instagram"></i> </a>
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-twitter-x"></i> </a> 
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-youtube"></i> </a> 
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr class="border-secondary">
+
+
+        <!-- Bottom Footer -->
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-center text-md-start">
+
+                <p class="mb-0">
+                    © 2026 FoodHub. All Rights Reserved.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+
+                <span class="text-light">
+                    Made with ❤️ for food lovers
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

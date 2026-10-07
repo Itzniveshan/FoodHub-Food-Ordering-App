@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders - FoodHub</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+         <link
+           rel="stylesheet"
+           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ============================== -->
+<!-- NAVBAR -->
+<!-- ============================== -->
+
+<nav class="navbar navbar-expand-lg foodhub-navbar">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="/Frontend/FoodHub/html/index.html">
+            FoodHub
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="order.html">
+                        My Orders
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="cart.html">
+
+                        Cart
+                        <span class="badge">0</span>
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+                        Contact
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="food.html">
+                            Food
+                        </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ============================== -->
+<!-- MY ORDERS -->
+<!-- ============================== -->
+
+<div class="container my-5">
+
+    <div class="text-center mb-5">
+
+        <h1>
+            My Orders
+        </h1>
+
+        <p class="text-muted">
+            View your previous FoodHub orders
+        </p>
+
+    </div>
+
+
+    <!-- Orders will appear here -->
+
+    <div id="orderHistory"></div>
+
+</div>
+
+
+
+<!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                <h3 class="fw-bold">🍴 FoodHub</h3>
+
+                <p class="text-light">
+                    Delicious food, delivered with care.
+                    Discover your favorite meals and order
+                    fresh food from FoodHub.
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="col-12 col-md-6 col-lg-2 mb-4">
+
+                <h5 class="fw-bold">Quick Links</h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="index.html"
+                           class="text-white text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="index.html#foods"
+                           class="text-white text-decoration-none">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="cart.html"
+                           class="text-white text-decoration-none">
+                            Cart
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                           class="text-white text-decoration-none">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                <h5 class="fw-bold">Contact Us</h5>
+
+                <p class="mb-2">
+                    📍 Chennai, India
+                </p>
+
+                <p class="mb-2">
+                    📞 +91 98765 43210
+                </p>
+
+                <p class="mb-2">
+                    ✉️ support@foodhub.com
+                </p>
+
+            </div>
+
+
+            <!-- Social Media -->
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                <h5 class="fw-bold">Follow Us</h5>
+
+                <p>
+                    Stay connected with FoodHub.
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons mb-3">
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-facebook"></i> </a> 
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-instagram"></i> </a>
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-twitter-x"></i> </a> 
+                    <a href="#" class="text-white mx-2"> <i class="bi bi-youtube"></i> </a> 
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr class="border-secondary">
+
+
+        <!-- Bottom Footer -->
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6 text-center text-md-start">
+
+                <p class="mb-0">
+                    © 2026 FoodHub. All Rights Reserved.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+
+                <span class="text-light">
+                    Made with ❤️ for food lovers
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- FoodHub JS -->
+
+<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>
