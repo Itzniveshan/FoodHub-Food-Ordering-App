@@ -15,9 +15,10 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
-         <link
-           rel="stylesheet"
-           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Custom CSS -->
 
     <link
@@ -27,7 +28,7 @@
 </head>
 
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 
 <!-- ============================== -->
@@ -40,7 +41,7 @@
 
         <a
             class="navbar-brand"
-            href="/Frontend/FoodHub/html/index.html">
+            href="index.html">
             FoodHub
         </a>
 
@@ -107,10 +108,15 @@
                     </a>
 
                 </li>
+
                 <li class="nav-item">
-                        <a class="nav-link" href="food.html">
-                            Food
-                        </a>
+
+                    <a
+                        class="nav-link"
+                        href="food.html">
+                        Food
+                    </a>
+
                 </li>
 
             </ul>
@@ -127,37 +133,39 @@
 <!-- MY ORDERS -->
 <!-- ============================== -->
 
-<div class="container my-5">
+<main class="flex-grow-1 order-page">
 
-    <div class="text-center mb-5">
+    <div class="container my-5">
 
-        <h1>
-            My Orders
-        </h1>
+        <div class="text-center mb-5">
 
-        <p class="text-muted">
-            View your previous FoodHub orders
-        </p>
+            <h1 class="display-3 fw-bold">
+                My Orders
+            </h1>
+
+        </div>
+
+
+        <!-- Orders will appear here -->
+
+        <div id="orderHistory"></div>
 
     </div>
 
-
-    <!-- Orders will appear here -->
-
-    <div id="orderHistory"></div>
-
-</div>
+</main>
 
 
 
 <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
 
     <div class="container">
 
         <div class="row">
 
             <!-- Brand -->
+
             <div class="col-12 col-md-6 col-lg-4 mb-4">
 
                 <h3 class="fw-bold">🍴 FoodHub</h3>
@@ -172,6 +180,7 @@
 
 
             <!-- Quick Links -->
+
             <div class="col-12 col-md-6 col-lg-2 mb-4">
 
                 <h5 class="fw-bold">Quick Links</h5>
@@ -179,31 +188,43 @@
                 <ul class="list-unstyled">
 
                     <li class="mb-2">
-                        <a href="index.html"
-                           class="text-white text-decoration-none">
+
+                        <a
+                            href="index.html"
+                            class="text-white text-decoration-none">
                             Home
                         </a>
+
                     </li>
 
                     <li class="mb-2">
-                        <a href="index.html#foods"
-                           class="text-white text-decoration-none">
+
+                        <a
+                            href="index.html#foods"
+                            class="text-white text-decoration-none">
                             Menu
                         </a>
+
                     </li>
 
                     <li class="mb-2">
-                        <a href="cart.html"
-                           class="text-white text-decoration-none">
+
+                        <a
+                            href="cart.html"
+                            class="text-white text-decoration-none">
                             Cart
                         </a>
+
                     </li>
 
                     <li>
-                        <a href="contact.html"
-                           class="text-white text-decoration-none">
+
+                        <a
+                            href="contact.html"
+                            class="text-white text-decoration-none">
                             Contact
                         </a>
+
                     </li>
 
                 </ul>
@@ -212,6 +233,7 @@
 
 
             <!-- Contact -->
+
             <div class="col-12 col-md-6 col-lg-3 mb-4">
 
                 <h5 class="fw-bold">Contact Us</h5>
@@ -232,6 +254,7 @@
 
 
             <!-- Social Media -->
+
             <div class="col-12 col-md-6 col-lg-3 mb-4">
 
                 <h5 class="fw-bold">Follow Us</h5>
@@ -241,11 +264,25 @@
                 </p>
 
                 <!-- Social Media Icons -->
+
                 <div class="social-icons mb-3">
-                    <a href="#" class="text-white mx-2"> <i class="bi bi-facebook"></i> </a> 
-                    <a href="#" class="text-white mx-2"> <i class="bi bi-instagram"></i> </a>
-                    <a href="#" class="text-white mx-2"> <i class="bi bi-twitter-x"></i> </a> 
-                    <a href="#" class="text-white mx-2"> <i class="bi bi-youtube"></i> </a> 
+
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#" class="text-white mx-2">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
                 </div>
 
             </div>
@@ -280,7 +317,7 @@
 
     </div>
 
-    </footer>
+</footer>
 
 
 
@@ -299,3 +336,4 @@
 </body>
 
 </html>
+
