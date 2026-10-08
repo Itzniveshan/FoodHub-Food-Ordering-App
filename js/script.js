@@ -819,13 +819,18 @@ if (cartItemsContainer) {
 
 }
 
-
 // =====================================================
 // CLEAR CART
 // =====================================================
 
 const clearCartBtn =
     document.getElementById("clearCartBtn");
+
+const clearCartToast =
+    document.getElementById("clearCartToast");
+
+const confirmClearCart =
+    document.getElementById("confirmClearCart");
 
 
 if (clearCartBtn) {
@@ -836,28 +841,51 @@ if (clearCartBtn) {
 
             if (cart.length === 0) {
 
-                alert("Your cart is already empty.");
+    const toast =
+        bootstrap.Toast.getOrCreateInstance(
+            clearCartToast
+        );
 
-                return;
+    const toastBody =
+        clearCartToast.querySelector(
+            ".toast-body"
+        );
 
-            }
+    toastBody.innerHTML = `
+        <strong>Cart is empty</strong>
+
+        <p class="mb-0 mt-1">
+            Your cart is already empty.
+        </p>
+    `;
+
+    toast.show();
+
+    return;
+
+}
 
 
-            const confirmClear =
-                confirm(
-                    "Are you sure you want to clear your cart?"
+            const toast =
+                bootstrap.Toast.getOrCreateInstance(
+                    clearCartToast
                 );
 
+            toast.show();
 
-            if (!confirmClear) {
+        }
+    );
 
-                return;
+}
 
-            }
 
+if (confirmClearCart) {
+
+    confirmClearCart.addEventListener(
+        "click",
+        function () {
 
             cart = [];
-
 
             saveCart();
 
@@ -865,6 +893,18 @@ if (clearCartBtn) {
 
             updateCartBadge();
 
+
+            const toast =
+                bootstrap.Toast.getOrCreateInstance(
+                    clearCartToast
+                );
+
+            toast.hide();
+
+
+            showToast(
+                "Cart cleared"
+            );
 
         }
     );

@@ -95,6 +95,47 @@
     </nav>
 
 
+    <div class="toast-container position-fixed end-0 p-3 foodhub-toast-container">
+
+    <div
+        id="clearCartToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true">
+
+        <div class="toast-body">
+
+            <strong>Clear Cart?</strong>
+
+            <p class="mb-2 mt-1">
+                Are you sure you want to clear your cart?
+            </p>
+
+            <div class="mt-2 pt-2 border-top">
+
+                <button
+                    type="button"
+                    id="confirmClearCart"
+                    class="btn btn-danger btn-sm">
+                    Clear Cart
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    data-bs-dismiss="toast">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
     <!-- Cart Section -->
     <main>
 
