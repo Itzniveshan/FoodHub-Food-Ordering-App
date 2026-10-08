@@ -175,3 +175,25 @@ body {
 footer {
     margin-top: 40px;
 }
+
+
+/* ============================== */
+/* FOODHUB TOAST */
+/* ============================== */
+
+.foodhub-toast-container {
+    top: 90px !important;
+    z-index: 1080;
+}
+
+#foodhubToast {
+    min-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background:var(--primary-orange);
+}
+
+#foodhubToast .toast-body {
+    font-weight: 500;
+    padding: 14px 16px;
+}

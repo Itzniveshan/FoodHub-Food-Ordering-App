@@ -83,6 +83,35 @@ const foods = {
 };
 
 
+// ==============================
+// FOODHUB TOAST
+// ==============================
+
+function showToast(message) {
+
+    const toastElement =
+        document.getElementById("foodhubToast");
+
+    const toastMessage =
+        document.getElementById("foodhubToastMessage");
+
+    if (!toastElement || !toastMessage) {
+        return;
+    }
+
+    toastMessage.textContent = message;
+
+    const toast =
+        bootstrap.Toast.getOrCreateInstance(
+            toastElement,
+            {
+                delay: 2500
+            }
+        );
+
+    toast.show();
+}
+
 // =====================================================
 // CART DATA
 // =====================================================
@@ -196,14 +225,7 @@ homeAddCartButtons.forEach(function (button) {
 
         updateCartBadge();
 
-
-        alert(
-            selectedFood.name +
-            " added to cart!"
-        );
-
-
-        window.location.href = "cart.html";
+        showToast("Added to cart");
 
     });
 
@@ -842,6 +864,7 @@ if (clearCartBtn) {
             displayCart();
 
             updateCartBadge();
+
 
         }
     );
