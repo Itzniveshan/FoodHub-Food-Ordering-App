@@ -132,6 +132,52 @@
 </nav>
 
 
+<!-- Delete Order Confirmation Toast -->
+<div
+    class="toast-container position-fixed end-0 p-3 foodhub-toast-container">
+
+    <div
+        id="deleteOrderToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true">
+
+        <div class="toast-body">
+
+            <strong>Delete Order?</strong>
+
+            <p class="mb-2 mt-1">
+                Are you sure you want to delete this order?
+            </p>
+
+            <div class="mt-2 pt-2 border-top">
+
+                <button
+                    type="button"
+                    id="confirmDeleteOrder"
+                    class="btn btn-danger btn-sm">
+                    Delete Order
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    data-bs-dismiss="toast">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
 
 <!-- ============================== -->
 <!-- MY ORDERS -->

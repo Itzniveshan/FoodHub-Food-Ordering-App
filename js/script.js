@@ -1439,6 +1439,16 @@ displayOrderHistory();
 // DELETE ORDER
 // =====================================================
 
+const deleteOrderToast =
+    document.getElementById("deleteOrderToast");
+
+const confirmDeleteOrder =
+    document.getElementById("confirmDeleteOrder");
+
+let orderToDelete = null;
+
+
+// When Delete Order button is clicked
 if (orderHistoryContainer) {
 
     orderHistoryContainer.addEventListener(
@@ -1450,33 +1460,51 @@ if (orderHistoryContainer) {
                     "delete-order-btn"
                 )
             ) {
-
                 return;
-
             }
 
 
-            const orderId =
-                Number(
-                    event.target.getAttribute(
-                        "data-order-id"
-                    )
+            // Get selected order ID
+            orderToDelete =
+                event.target.getAttribute(
+                    "data-order-id"
                 );
 
 
-            const confirmDelete =
-                confirm(
-                    "Are you sure you want to delete this order?"
-                );
+            // Show confirmation toast
+            if (
+                deleteOrderToast &&
+                typeof bootstrap !== "undefined"
+            ) {
 
+                const toast =
+                    bootstrap.Toast.getOrCreateInstance(
+                        deleteOrderToast
+                    );
 
-            if (!confirmDelete) {
-
-                return;
+                toast.show();
 
             }
 
+        }
+    );
 
+}
+
+
+// Confirm Delete button
+if (confirmDeleteOrder) {
+
+    confirmDeleteOrder.addEventListener(
+        "click",
+        function () {
+
+            if (!orderToDelete) {
+                return;
+            }
+
+
+            // Get current orders
             let orderHistory =
                 JSON.parse(
                     localStorage.getItem(
@@ -1485,28 +1513,53 @@ if (orderHistoryContainer) {
                 ) || [];
 
 
+            // Remove selected order
             orderHistory =
                 orderHistory.filter(
                     function (order) {
 
-                        return order.id !== orderId;
+                        return String(order.id) !==
+                            String(orderToDelete);
 
                     }
                 );
 
 
+            // Save updated orders
             localStorage.setItem(
                 "foodhubOrders",
                 JSON.stringify(orderHistory)
             );
 
 
+            // Hide confirmation toast
+            if (
+                deleteOrderToast &&
+                typeof bootstrap !== "undefined"
+            ) {
+
+                const toast =
+                    bootstrap.Toast.getOrCreateInstance(
+                        deleteOrderToast
+                    );
+
+                toast.hide();
+
+            }
+
+
+            // Clear selected order
+            orderToDelete = null;
+
+
+            // Refresh order history
             displayOrderHistory();
 
         }
     );
 
 }
+
 
 // ==============================
 // CONTACT FORM - EMAILJS
