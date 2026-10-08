@@ -434,14 +434,30 @@ if (
                 updateCartBadge();
 
 
-                alert(
-                    selectedFood.name +
-                    " added to cart!"
-                );
 
+// Show Bootstrap toast
+const foodDetailToast =
+    document.getElementById("foodDetailToast");
 
-                window.location.href =
-                    "cart.html";
+const foodDetailToastMessage =
+    document.getElementById("foodDetailToastMessage");
+
+if (foodDetailToast && foodDetailToastMessage) {
+
+    foodDetailToastMessage.textContent =
+        selectedFood.name + " added to cart";
+
+    const toast =
+        bootstrap.Toast.getOrCreateInstance(
+            foodDetailToast,
+            {
+                delay: 2500
+            }
+        );
+
+    toast.show();
+}
+
 
             }
         );

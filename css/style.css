@@ -190,7 +190,6 @@ footer {
     min-width: 280px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    background:var(--primary-orange);
 }
 
 #foodhubToast .toast-body {
