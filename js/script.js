@@ -1619,23 +1619,42 @@ if (contactForm) {
                 response.status,
                 response.text
             );
-
-            alert("Message sent successfully!");
-
-            contactForm.reset();
-
-        })
-
-        .catch(function (error) {
-
-            console.error("EmailJS Error:", error);
-
-            alert(
-                "Failed to send message. Please try again."
+    const contactToast =
+        document.getElementById("contactToast");
+    
+    const contactToastMessage =
+        document.getElementById("contactToastMessage");
+    
+    if (contactToast && contactToastMessage) {
+    
+        contactToastMessage.textContent =
+            "Message sent successfully";
+    
+        const toast =
+            bootstrap.Toast.getOrCreateInstance(
+                contactToast,
+                {
+                    delay: 2500
+                }
             );
-
+    
+        toast.show();
+    }
+    
+                contactForm.reset();
+    
+            })
+    
+            .catch(function (error) {
+    
+                console.error("EmailJS Error:", error);
+    
+                alert(
+                    "Failed to send message. Please try again."
+                );
+    
+            });
+    
         });
-
-    });
-
-}
+    
+    }
