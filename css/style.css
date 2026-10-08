@@ -1,6 +1,5 @@
 /* FoodHub Custom CSS */
 
-
 body {
     background-color: var(--cream-bg);
     color: var(--charcoal);
@@ -124,6 +123,9 @@ body {
 
 .foodhub-navbar {
     background-color: var(--charcoal);
+     min-height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -164,7 +166,10 @@ body {
     background-color: var(--primary-orange) !important;
 }
 
-.order-page { min-height: 200px; padding-bottom: 200px; }
+.order-page { 
+    min-height: 200px; 
+    padding-bottom: 200px;
+ }
 
 /* Footer */
 footer {
